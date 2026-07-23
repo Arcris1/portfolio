@@ -82,8 +82,21 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .nav-status{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.68rem;color:var(--mist)}
 .nav-status b{color:var(--ink);font-weight:700}
 .nav-status .pulse{width:8px;height:8px;border-radius:50%;background:var(--gold-deep);animation:pulse 2s infinite}
+.nav-right{display:flex;align-items:center;gap:16px}
+.resume-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:var(--gold);text-decoration:none;
+  font-size:.78rem;font-weight:700;padding:10px 18px;border-radius:var(--r-pill);
+  transition:.3s cubic-bezier(.22,1,.36,1);white-space:nowrap;
+}
+.resume-btn:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 10px 24px rgba(240,166,43,.35)}
+.resume-btn svg{width:13px;height:13px}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta.ghost{background:transparent;color:var(--cream);border:1.5px solid #3a3a3a}
+.cta.ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:none}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,142,18,.5)}70%{box-shadow:0 0 0 9px rgba(217,142,18,0)}100%{box-shadow:0 0 0 0 rgba(217,142,18,0)}}
 @media(max-width:820px){nav{display:none}}
+@media(max-width:560px){.nav-status{display:none}}
 
 /* ---------- hero ---------- */
 .hero{
@@ -353,7 +366,13 @@ header,.hero,.about,.stack,.exp,.contact{
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="nav-status"><span class="pulse"></span><span><b>Cavite, PH</b> · open to work</span></div>
+  <div class="nav-right">
+    <div class="nav-status"><span class="pulse"></span><span><b>Cavite, PH</b> · open to work</span></div>
+    <a class="resume-btn" href="Arcris-Silang-Resume.pdf" download="Arcris-Silang-Resume.pdf">
+      Resume
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>
+    </a>
+  </div>
 </header>
 
 <main id="top">
@@ -367,7 +386,7 @@ header,.hero,.about,.stack,.exp,.contact{
     <p class="hero-sub">Senior Software Engineer building scalable web &amp; mobile products multi-tenant SaaS, VoIP systems, centralized authentication and AI-powered platforms then teaching the next generation of programmers how it's done.</p>
     <div class="socials" aria-label="Social links">
       <a href="https://github.com/Arcris1" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
-      <a href="https://www.linkedin.com/in/arcris-silang" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://www.linkedin.com/in/arcris-silang-3a918a277/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
       <a href="mailto:silangarcris2@gmail.com" aria-label="Email">@</a>
     </div>
     <div class="stats">
@@ -594,10 +613,13 @@ header,.hero,.about,.stack,.exp,.contact{
   <div class="mark" style="top:26px;right:26px"><svg viewBox="0 0 30 30" fill="none" stroke="#F1EDE4" stroke-width="1.6"><circle cx="15" cy="15" r="7"/><path d="M15 0v8M15 22v8M0 15h8M22 15h8"/></svg></div>
   <h2 class="reveal">let's build<br>something <em>alive</em></h2>
   <p class="reveal d1">Whether it's a full-stack product, an AI automation that saves your team hours, or a classroom of future engineers I'm in.</p>
-  <a class="cta reveal d2" href="mailto:silangarcris2@gmail.com">Start a conversation <span>→</span></a>
+  <div class="cta-row">
+    <a class="cta reveal d2" href="mailto:silangarcris2@gmail.com">Start a conversation <span>→</span></a>
+    <a class="cta ghost reveal d3" href="Arcris-Silang-Resume.pdf" download="Arcris-Silang-Resume.pdf">Download resume <span>↓</span></a>
+  </div>
   <div class="footer">
     <span>© 2026 Arcris Silang engineered &amp; designed by hand</span>
-    <div class="f-social"><a href="https://github.com/Arcris1" target="_blank" rel="noopener">github</a><a href="https://www.linkedin.com/in/arcris-silang" target="_blank" rel="noopener">linkedin</a><a href="mailto:silangarcris2@gmail.com">silangarcris2@gmail.com</a></div>
+    <div class="f-social"><a href="https://github.com/Arcris1" target="_blank" rel="noopener">github</a><a href="https://www.linkedin.com/in/arcris-silang-3a918a277/" target="_blank" rel="noopener">linkedin</a><a href="mailto:silangarcris2@gmail.com">silangarcris2@gmail.com</a></div>
     <span>Dasmariñas City, Cavite, PH · UTC+8</span>
   </div>
 </section>
